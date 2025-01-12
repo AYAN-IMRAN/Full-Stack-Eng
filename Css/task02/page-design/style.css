@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Titan+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Grotesk", serif;
+}
+
+.cantainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+.page1 {
+  width: 70vw;
+  height: 60vh;
+  background-color: #f6f0e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  box-shadow: 16px 20px 20px 0px rgb(74, 74, 74);
+}
+
+.card {
+  width: 100%;
+  position: relative;
+}
+
+.brush img {
+  width: 10%;
+  position: absolute;
+  top: 0px;
+  right: -10px;
+}
+
+.x {
+  position: absolute;
+  left: -40px;
+  top: -30px;
+}
+.x h5 {
+  font-family: "Space Grotesk", serif;
+}
+
+.year {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: black;
+  padding: 0px 40px;
+  margin: 8px 8px;
+}
+
+.heading {
+  margin-top: 20px;
+}
+.heading h1 {
+  font-size: 48px;
+}
+
+.brush2 img {
+  width: 10%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.page2 {
+  width: 70vw;
+  height: 70vh;
+  background-color: #f6f0e2;
+  position: relative;
+  top: 150px;
+display: flex;
+justify-content: space-between;
+  box-shadow: 16px 20px 20px 0px rgb(74, 74, 74);
+}
+
+.left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-card{
+    width: 80%;
+    height: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 12px;
+background-color: white;
+box-shadow: 9px 10px 20px 0px rgb(121, 121, 121);
+
+}
+.img-card img{
+    border-radius: 12px;
+    height: 40vh;
+object-fit: cover;
+}
+
+
+
+.cantainer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    width: 50%;
+    height: 100%;
+    padding: 40px 20px;
+}
+.about-heading{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 80px;
+}
+.x2{
+    font-size: 26px;
+    color: rgb(85, 85, 85);
+}
+
+
+.right p{
+    font-size: 16px;
+    padding: 28px 0px;
+}
+.line2 {
+    flex-grow: 1;
+    height: 1px;
+    background-color: black;
+    padding: 0px 40px;
+    margin: 20px 0px;
+  }
+
+  .contact{
+
+  }
+  .icon{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+.page3{
+    height: 40vh;
+}
