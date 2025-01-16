@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.canatiner{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(201, 221, 161);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    width: 26%;
+    padding: 30px 20px;
+
+    background-color: white;
+    border-radius: 12px;
+}
+.air-img img{
+    width: 100%;
+    object-fit: cover;
+}
+.content{
+
+}
+.content h1{
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;  
+    
+}
+.content p{
+    font-size: 16px;
+    padding-top: 6px;  
+}
+
+.option{
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+.option select{
+    padding: 6px 8px;
+    background-color: white;
+    color: rgb(107, 106, 106);
+
+}
+.last{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+}
+.price h3{
+    font-size: 18px;
+}
+.add-btn button{
+    background: linear-gradient(to right, rgb(1, 215, 1), rgb(242, 242, 48));
+padding: 8px 46px;
+border-radius: 8px;
+border: none;
+outline: none;
+}

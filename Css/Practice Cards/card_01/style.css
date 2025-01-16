@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Titan+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+font-family: "Space Grotesk", serif;
+}
+.cantainer{
+    width: 100vw;
+    height: 90vh;
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav{
+margin-top: 10px;
+padding: 20px 26px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.arrow {
+background-color: white;
+border-radius: 6px;
+font-size: 22px;
+}
+
+.heart {
+    color: white;
+    border-radius: 6px;
+    font-size: 22px;
+    z-index: 1;
+    }
+
+.card{
+    width: 25%;
+    height: 75vh;
+    border-radius: 14px;
+    background-color: #1E1F21;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img::before{
+    content: "";  
+    background-image: url(/images/shoe.png);
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    width: 290px;
+    height: 290px;
+    z-index: 20;
+    transform: rotate(-30deg);
+}
+
+.side-circle::after{
+
+    content: "";
+width: 72%;
+height: 35vh;
+background-color: #FAC425;
+position: absolute;
+top: -30px;
+right: -30px;
+border-radius: 48%;
+
+}
+
+
+.heading{
+    position: relative;
+    display: block;
+    unicode-bidi: isolate;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-family: "Space Grotesk", serif;
+    color: white;
+    padding: 80px 12px;
+    text-align: center;
+    z-index: 1;
+    
+}
+.product-details{
+    position: relative;
+    padding: 10px 15px;
+
+}
+
+.name p{
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+
+}
+.price span{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.stars{
+    display: inline;
+    color: #FAC425;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.star6{
+    color: white;
+}
+
+.price {
+    color: white;
+    
+    
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+#secend{
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.size{
+display: flex;
+gap: 5px;
+margin-left: 15px;
+margin-top: 5px;
+}
+.size-heading p{
+    color: white;
+    font-size: 12px;
+    font-weight:bold;
+    margin-left: 15px;
+
+}
+.num-box{
+    position: relative;
+    width: 25px;
+    height: 25px;  
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    
+
+}
+.box1{
+    background-color: #FAC425;
+    color: black;
+}
+.last{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+
+}
+    
+.color-heading{
+    color: white;
+    font-size: 10px;
+    font-weight:bold;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.color{
+    margin-left: 12px;
+}
+.color i{
+    font-size: 10px;
+}
+.btn button{
+background-color: #FAC425;
+color: black;
+padding: 10px 15px;
+border-radius: 8px;
+border: none;
+outline: none;
+}

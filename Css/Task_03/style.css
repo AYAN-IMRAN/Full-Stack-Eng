@@ -1,0 +1,169 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container, ensuring content is centered and flexbox is used for alignment */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+/* Styling for cards container, with flexible layout and spacing */
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Ensures cards wrap if screen space is tight */
+}
+
+/* Individual card styling */
+.card {
+    width: 310px;
+    position: relative;
+    background-color: #FBFBFB;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 45px;
+}
+
+/* Rotating background element for visual effect */
+.rotate {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    border-radius: 28px;
+    rotate: 15deg; /* Using rotate CSS property */
+    position: absolute;
+    z-index: -1;
+}
+
+/* Main header (OUR TEAM) styling */
+main h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    width: fit-content;
+    padding: 5px 5px;
+    border-bottom: #22bebe 2px solid;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Paragraph styling for introductory text */
+main p {
+    font-size: 1.2rem;
+    width: 60%;
+    color: rgb(136, 136, 136);
+    padding: 25px 5px;
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Styling for image container */
+.img {
+    width: 30%;
+    height: 30%;
+    margin-top: -15%;
+    border-radius: 50%;
+}
+
+/* Image itself inside the .img container */
+.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-position: top; /* Ensures image is aligned to the top of the container */
+}
+
+
+.card h1 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    width: fit-content;
+    padding: 5px 5px;
+    color: #4F4F4F;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: capitalize; /* Capitalizes the first letter of the name */
+}
+
+
+.card h3 {
+    font-size: 1.1rem;
+    width: 60%;
+    text-align: center;
+    padding: 5px 5px;
+    color: #4F4F4F;
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Description text below the name (specialization) */
+.card span {
+    font-size: 1rem;
+    width: 95%;
+    padding: 5px 5px;
+    font-weight: 200;
+    text-align: center;
+    color: gray;
+}
+
+/* Star element for ratings or additional visual elements */
+.star {
+    width: 10%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-color: #dcdcdc;
+    border-radius: 100%;
+}
+
+.star i {
+    color: #FEBF0C;
+    text-align: center;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+
+    /* Main container will stack elements vertically on smaller screens */
+    main {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    /* Cards container switches to column layout with increased gap between cards */
+    .cards {
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    /* Responsive styling for text content */
+    main p {
+        width: 100%;
+        font-size: medium;
+    }
+
+    /* Flex wrapping on cards container for smaller screen sizes */
+    .card {
+        flex-wrap: wrap;
+    }
+
+    /* Adjust image size in smaller screen view */
+    .img {
+        width: 28%;
+    }
+}
