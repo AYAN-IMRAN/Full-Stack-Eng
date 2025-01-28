@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.main{
+    width: 100vw;
+    height: 110vh;
+    background-color: #DDE1E6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vw 2vw;
+    gap: 20px;
+}
+.main .name{
+    font-size: 2rem;
+   
+}
+.bento-box{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+}
+
+.bento-box .box{
+    background-color: #EDEDED;
+    border-radius: 16px;
+    border: 2px solid white;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    overflow: hidden;
+    
+ 
+}
+.bento-box .box .label{
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #ADDAAD;
+    border-radius: 30px;
+    color: #3D600F;
+    font-weight: 600;
+}
+
+#box1, #box5{ 
+    grid-column: span 2;
+}
+
+#box3, #box5{
+    grid-row: span 2;
+}
+
+#box1 div{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+    color: #414141;
+  
+}
+
+#box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#box2 img{
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+
+}
+
+#box4{
+    background-image: url(https://i.pinimg.com/736x/cf/b0/58/cfb058ab6bfd8c57d0c641ed32fba8c7.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience{
+    width: 100%;
+ 
+}
+
+.experience .exp-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   border-bottom: 1.5px solid #616161;
+    padding: 12px 0px;
+}
+.exp-item .left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.exp-item .role{
+    font-size: 1.2rem;
+    color: #212121;
+
+
+}
+.exp-item .company-name{
+    font-size: 0.9rem;
+    color: #414141;
+
+}
+
+.exp-item .date{
+    color: #414141;
+}
+
+#box3 img{
+    width: 100%;
+    mix-blend-mode: darken;
+    position: relative;
+    transform: rotate(-45deg);
+    left: 50%;
+    
+}
+
+#box7{
+    background-image: url(https://i.pinimg.com/736x/40/67/aa/4067aa9e6340a8f1acbaf6de5e8491b8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: #2121217d;
+}

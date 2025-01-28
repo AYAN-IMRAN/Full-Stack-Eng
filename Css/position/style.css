@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  max-width: 500px;
+  position: absolute;
+  bottom: 10px;
+  color: rgb(205, 205, 205);
+}
+
+.brandName {
+  font-weight: 400;
+  line-height: 0.8;
+  margin-bottom: 100px;
+}
+
+.title1 {
+  font-size: 6rem;
+  margin-left: 10px;
+}
+
+.title2 {
+  font-size: 7rem;
+}
+
+.content span {
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Increase the z-index of all images  */
+
+.images {
+  z-index: 999;
+}
+
+/* set position set to absolute */
+.image-conatiner,
+.back-image,
+.front-image {
+  position: absolute;
+}
+
+/* ......set each image size here b:back-image f:front image */
+
+.b1,
+.f1,
+.f2,
+.b3,
+.f6,
+.b7 {
+  width: 100px;
+  height: 100px;
+}
+
+.b2 {
+  width: 200px;
+  height: 150px;
+}
+
+.f3,
+.f10 {
+  width: 100px;
+  height: 70px;
+}
+.f5 {
+  width: 140px;
+  height: 110px;
+}
+
+.f4 {
+  width: 170px;
+  height: 120px;
+}
+
+.f6,
+.b8,
+.f8,
+.f9,
+.b9 {
+  width: 80px;
+  height: 70px;
+}
+
+/* here I set Position of each image  */
+
+/* first I set the position of the container in which we have front and back image  */
+.image1 {
+  top: 50px;
+  left: 0;
+}
+
+/* then set the front and back image position */
+.b1 {
+  top: -20px;
+  left: 20px;
+  z-index: -1;
+    /* set z-index to -1 to make it look like it is behind the front image */
+  transform: rotate(
+    180deg
+  ); 
+  /* rotate the image to make it look exactly like the task image */
+}
+
+.f1 {
+  top: 20;
+  left: -40px;
+}
+
+/* now for image2 container */
+.image2 {
+  top: 14%;
+  right: 60px;
+}
+.b2 {
+  top: -60px;
+  right: -80px;
+  z-index: -1;
+}
+
+.f2 {
+  top: 20;
+  left: -40px;
+}
+
+/* now for image 3,4,5,6 it does not have any back image that is why I only set its container position */
+.image3 {
+  top: 7%;
+  left: 45%;
+}
+
+.image4 {
+  top: 35%;
+  left: 13%;
+}
+
+.image5 {
+  top: 38%;
+  right: 41%;
+}
+
+.image6 {
+  top: 80%;
+  left: 10%;
+}
+
+/* now for image 7,8,9,10 */
+.image7 {
+  top: 60%;
+  left: -50px;
+}
+.b7 {
+  top: -20px;
+  left: 20px;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
+.image8 {
+  bottom: 40%;
+  right: 55%;
+}
+
+.b8 {
+  left: 50px;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
+.image9 {
+  bottom: 20%;
+  right: 6%;
+}
+
+.b9 {
+  top: -10px;
+  right: -25px;
+  z-index: -1;
+}
+
+.image10 {
+  bottom: 50%;
+  right: 5%;
+}

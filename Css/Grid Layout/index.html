@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        .container{
+            width: 100vw;
+            min-height: 100vh;
+            background-color: grey;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap: 16px;
+            padding: 4vw;
+        }
+        .box{
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 2px 2px 15px grey;
+            border: 1px solid rgba(255, 255, 255, 0.867);
+            background-blend-mode:luminosity;
+            transition: all ease-in-out 0.3s;
+
+            
+        }
+        .box:hover{
+            background-color: #212121;
+            background-position: bottom;
+        }
+        #box1,#box4,#box7,#box5{
+            grid-row: span 2;
+        }
+        #box2 ,#box3,#box5,#box8{
+            grid-column: span 2;
+        }
+        #box6{
+            grid-row: span 3;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="box" id="box1" style="background-image: url(https://i.pinimg.com/236x/fc/35/7c/fc357c032aa5c8e4082fc74a14eec2f0.jpg);"></div>
+            <div class="box" id="box2" style="background-image: url(https://i.pinimg.com/736x/4a/0a/7e/4a0a7e6460c8a58838d7b3847995dea8.jpg);"></div>
+            <div class="box" id="box3" style="background-image: url(https://i.pinimg.com/736x/8a/01/04/8a010417b11426fc584e16332647d195.jpg);"></div>
+            <div class="box" id="box4" style="background-image: url(https://i.pinimg.com/236x/84/a6/a2/84a6a2aa090b68e08cef5773857d91fc.jpg);"></div>
+            <div class="box" id="box5" style="background-image: url(https://i.pinimg.com/236x/2b/15/86/2b1586c10a6696a57820fab1dfec0fd7.jpg);"></div>
+            <div class="box" id="box6" style="background-image: url(https://i.pinimg.com/236x/0a/f7/74/0af7741991985e2b530c8f62135c3eea.jpg);"></div>
+            <div class="box" id="box7" style="background-image: url(https://i.pinimg.com/236x/ed/3e/de/ed3edec952508bdad45e77f96c8e48a4.jpg);"></div>
+            <div class="box" id="box8" style="background-image: url(https://i.pinimg.com/236x/bc/32/0e/bc320e6dead97f2bf0266e1902f2e76f.jpg);"></div>
+            <div class="box" id="box9" style="background-image: url(https://i.pinimg.com/236x/b4/47/b0/b447b09269e14dfe89a4051e65cf2cf2.jpg);"></div>
+        </div>
+    </main>
+</body>
+</html>

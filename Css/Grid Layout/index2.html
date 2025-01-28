@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gallery Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            /* height: 100vh; */
+            min-height: 100vh;
+            background-color: #919191;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 4vw;
+        }
+        .box{
+            background-color: aqua;
+            border-radius: 8px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 2px 2px 15px grey;
+            border: 1px solid white;
+            transition: all ease-in-out 0.3s;
+            background-color: #212121;
+        }
+      #box1, #box4, #box5, #box7{
+        grid-row: span 2;
+      }
+      #box2, #box3, #box5, #box8{
+        grid-column: span 2;
+      }
+      #box6{
+        grid-row: span 3;
+      }
+      .box:hover{
+        background-blend-mode: luminosity;
+        background-position: bottom;
+      }
+      @media screen and (max-width: 480px) {
+        .main{
+            min-width: 100vh;
+            
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(9, 1fr);
+            
+        }
+        .box{
+         
+        }
+        #box1, #box4, #box5, #box7{
+        grid-row: span 1;
+        width: 100%;
+        height: 350px;
+      }
+      #box2, #box3, #box5, #box8{
+        grid-column: span 1;
+        width: 100%;
+        height: 350px;
+      }
+      #box6{
+        grid-row: span 1;
+        width: 100%;
+        height: 350px;
+      }
+      
+     
+      }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box" id="box1" style="background-image: url(https://i.pinimg.com/736x/4a/0a/7e/4a0a7e6460c8a58838d7b3847995dea8.jpg);"></div>
+        <div class="box" id="box2" style="background-image: url(https://i.pinimg.com/736x/ed/89/ca/ed89ca65870815d9849427b46041b36d.jpg);"></div>
+        <div class="box" id="box3"  style="background-image: url(https://i.pinimg.com/736x/19/2d/c7/192dc7c9a63abb98e500738c816902f3.jpg);"></div>
+        <div class="box" id="box4"  style="background-image: url(https://i.pinimg.com/736x/8a/01/04/8a010417b11426fc584e16332647d195.jpg);"></div>
+        <div class="box" id="box5"  style="background-image: url(https://i.pinimg.com/736x/9e/7a/05/9e7a0537424fc849ac4bef45da267de5.jpg);"></div>
+        <div class="box" id="box6"  style="background-image: url(https://i.pinimg.com/736x/a8/0c/e2/a80ce2cbf541d252b1fe5f55aaf12503.jpg);"></div>
+        <div class="box" id="box7"  style="background-image: url(https://i.pinimg.com/736x/80/d9/80/80d9809a4d1b107cf4a61617731c92f6.jpg);"></div>
+        <div class="box" id="box8"  style="background-image: url(https://i.pinimg.com/736x/a5/41/28/a54128109c2f158dd261efc7b347d9dc.jpg);"></div>
+        <div class="box" id="box9"  style="background-image: url(https://i.pinimg.com/736x/13/ad/ab/13adab550964904a3cde95c2581de172.jpg);"></div>
+    </div>
+</body>
+</html>
