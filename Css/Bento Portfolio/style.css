@@ -1,0 +1,589 @@
+/* Universal Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's width/height */
+    overflow-y: hidden; /* Prevents vertical scrolling */
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar{
+    display: none; 
+}
+
+/* Main container settings */
+.main{
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgb(0, 0, 0); /* Black background */
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Align items to the left */
+    gap: 10px;
+    padding: 2vw; /* Padding for responsiveness */
+    font-family: sans-serif; /* Apply sans-serif font */
+}
+
+/* Bento box container */
+.bento-box{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* Black background */
+    display: grid;
+    grid-template-rows: repeat(4,1fr); /* 4 equal rows */
+    grid-template-columns: repeat(4,1fr); /* 4 equal columns */
+    gap: 10px;
+    position: relative;
+}
+
+/* Individual box styling */
+.box{
+    background-color:#FFF3F3; /* Light pinkish background */
+    border-radius: 14px; /* Rounded corners */
+    border: 2px solid white; /* White border */
+    padding: 2vw; /* Padding inside each box */
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Align content to the left */
+    gap: 10px; /* Gap between items */
+    scale: 0; /* Initial scale set to 0 for animation */
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: scale 1s linear 0.3s 1 forwards; /* Animation for scaling in */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+/* Specific box sizes and positions */
+#box1, #box4, #box5, #box6{
+    grid-row: span 2; /* These boxes will span 2 rows */
+}
+#box9, #box5{
+    grid-column: span 2; /* These boxes will span 2 columns */
+}
+
+/* Box 1: Special layout */
+#box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Even space distribution */
+    align-items: center; /* Center alignment */
+    text-align: center; /* Center text */
+    padding: 20px 20px;
+    gap: 10px;
+}
+
+/* Hidden circle inside box1 */
+.hidden-25 {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%; /* Circular shape */
+    border: 6px solid #EF7A7E; /* Red border */
+    opacity: 0.75; /* 25% transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+}
+
+/* Box1 text styling */
+.first-text{
+    font-size: 1.3vw; /* Responsive font size */
+    text-align: center;
+    display: flex;
+    align-content: center;
+}
+
+/* Circular progress bar */
+.round{
+    border-radius: 50%; /* Circular */
+    width: 50%;
+    height: 50%;
+    border: 4px solid black; /* Black border */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+}
+
+/* Box1 last text styles */
+.last-text h2{
+    font-size: 2vw; /* Font size */
+}
+
+.last-text p{
+    font-size: 1.2vw; /* Font size */
+}
+
+/* Box 2 Layout */
+#box2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Box2 first section */
+.first{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.first h3{
+    font-size: 2.3rem; /* Font size */
+}
+
+.first i{
+    font-size: 1.4rem; /* Icon font size */
+}
+
+/* Box2 last section */
+.last{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.last h4{
+    font-size: 0.8rem; /* Font size */
+}
+
+/* Box 3 Layout */
+#box3{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+#box3 .content h4{
+    font-size: 1rem; /* Font size */
+    color: #393735; /* Dark color */
+    margin-bottom: 5px;
+}
+
+.content h1{
+    font-size: 2.6rem; /* Font size */
+    margin-bottom: 2px;
+}
+
+.content p{
+    font-size: 1rem; /* Font size */
+    margin-bottom: 5px;
+    color: #19ff08; /* Green text */
+    text-align: end; /* Align to the right */
+}
+
+/* Box 4 Layout */
+#box4{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    position: relative;
+}
+
+/* Box 4 image styling (optional) */
+.spring{
+    position: absolute;
+    left: 140px;
+    top: 40px;
+    overflow: hidden;
+}
+
+.spring img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+}
+
+/* Box4 Content Styling */
+#box4 .content4 h5{
+    font-size: 1.2rem; /* Font size */
+    color: #393735; /* Dark color */
+    text-align: start;
+    margin-bottom: 5px;
+}
+
+.content4 h1{
+    text-align: start;
+    font-size: 3.4rem; /* Font size */
+    margin-bottom: 2px;
+}
+
+/* Circular image container */
+.round-img {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.round-img img {
+    width: 40px; /* Image size */
+    height: 40px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    object-position: top; /* Align image top */
+}
+
+/* Box 4 Content Text Styling */
+.content4 h4{
+    margin-top: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: start;
+}
+
+#box4 .content4 p{
+    font-size: 1rem; /* Font size */
+    margin-bottom: 5px;
+    color: #c16b6d; /* Pinkish color */
+    text-align: start;
+}
+
+/* Box 5 Layout */
+#box5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Center image in box5 */
+.center-img{
+    width: 45%;
+    height: 100%;
+ position: absolute;
+ z-index: 999;
+}
+
+.center-img img{
+    width: 100%;
+    object-fit: cover;
+    background-blend-mode: luminosity;
+    transition: all ease-in 1s 1s;
+    z-index: 999;
+
+    
+    
+}
+
+/* Box6 Layout */
+#box6{
+    display: flex;
+}
+
+/* Box6 Heading */
+#box6 h3{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 24px;
+}
+
+/* Box6 images container */
+.box6-img{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.box-6 img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Box7 Image styling */
+#box7 img{
+    width: 30%;
+    height: 60%;
+    object-fit: cover;  
+}
+
+/* Box 7 Layout */
+#box7{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Box 8 Layout */
+#box8{
+    display: flex;
+}
+
+#box8 h1{
+    font-size: 1.4rem;
+}
+
+#box8 p{
+    font-size: 1rem;
+}
+
+/* Box color containers */
+.boxes{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.box-grey{
+    background-color: #545253; /* Grey box */
+    width: 40px;
+    height: 40px;
+}
+
+.box-light{
+    background-color:#C4C4C4; /* Light grey box */
+    width: 40px;
+    height: 40px;
+}
+
+.box-pink{
+    background-color: #F97B7D; /* Pink box */
+    width: 40px;
+    height: 40px;
+}
+
+.box-darkPink{
+    background-color: #f5b6b4; /* Dark pink box */
+    width: 40px;
+    height: 40px;
+}
+
+/* Merged layout for box9 */
+.left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right{
+    width: 40%;
+}
+
+.merge{
+    display: flex;
+    justify-content:space-between;
+}
+
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Animation keyframes for scale */
+@keyframes scale {
+    from{
+        scale: 0;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/* Media Queries for responsiveness */
+
+/* Medium screen (max-width: 1024px) */
+@media only screen and (max-width: 1024px) {
+    .bento-box{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        overflow: scroll;
+    }
+
+    #box1, #box2, #box3, #box4, #box6, #box7, #box8, #box9{
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    #box5{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    #box1{
+        height: 300px;
+    }
+
+    #box1 h3{
+        font-size: 18px;
+    }
+
+    .last-text p{
+        font-size: 16px;
+    }
+
+    .hidden-25 p{
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #box2{
+        height: 300px;
+    }
+
+    #box3{
+        height: 300px;
+        display: flex;
+        align-items: center;
+    }
+
+    .content p{
+        font-size: 1.4rem;
+    }
+
+    #box2 .last h4{
+        font-size: 18px;
+    }
+
+    #box4{
+        height: 300px;
+    }
+
+    #box5{
+        height: 400px;
+    }
+    .center-img{
+        width: 40%;
+        height: 100%;
+        position: absolute;
+    }
+    #box6{
+        height: 300px;
+        padding: 4vw;
+    }
+
+    #box9, #box8{
+        height: 200px;
+        padding: 4vw;
+    }
+
+    .merge{
+        display: flex;
+        gap: 10px;
+    }
+
+    .right img{
+        width: 80%;
+    }
+
+    .left h2{
+        font-size: 18px;
+    }
+}
+
+/* Small screen (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .bento-box{
+        display: grid;
+        grid-template-rows: repeat(7,1fr);
+        grid-template-columns: repeat(1,1fr);
+        overflow: scroll;
+    }
+
+    #box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    #box1{
+        height: 400px;
+    }
+
+    #box1 h3{
+        font-size: 20px;
+    }
+
+    .hidden-25 p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .last-text p{
+        font-size: 20px;
+    }
+
+    #box2, #box3{
+        height: 200px;
+    }
+
+    #box2 .last h4{
+        font-size: 18px;
+    }
+
+    #box3{
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .content h4{
+        font-size: 28px;
+    }
+
+    .content p{
+        font-size: 24px;
+    }
+
+    #box4{
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content4 p{
+        font-size: 28px;
+    }
+
+    #box5{
+        height: 300px;
+    }
+    .center-img{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+    }
+    #box6{
+        height: 300px;
+        padding: 4vw;
+    }
+
+    #box7{
+        height: 300px;
+    }
+
+    #box8{
+        height: 150px;
+    }
+
+    #box9{
+        height: 200px;
+    }
+
+    .left{  
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .right img{
+        width: 80%;
+    }
+}
