@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Luxurious+Roman&family=New+Rocker&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Titan+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+font-family: sans-serif;
+animation-timeline: scroll;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+}
+.section-1{
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav{
+    width: 100%;
+    /* position: fixed;
+    top: 0; */
+    height: 15%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.logo{
+    display: flex;
+
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item{
+display: flex;
+
+}
+.item ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    align-items: center;
+    color: #939191;
+}
+.item ul li{
+    margin: 0 20px; 
+    transition: all ease-in-out 0.2s;                                        
+}
+
+.item ul li:hover{
+    color: #fff;
+    
+    border-bottom:2px solid #FE0000 ;
+    cursor: pointer;
+}
+.search i{
+    font-size: 26px;
+    color: #939191;
+}
+.search i:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+.circle{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #FE0000; 
+    box-shadow: -20px -20px 40px 20px #FE0000, 1px 0px 40px #FE0000,-20px -20px 20px 40px #FE0000, 1px 0px 40px #FE0000;
+    
+}
+.hero h1{
+    position: absolute;
+    
+    color: white;
+    font-weight: bold;
+    font-family: "Space Grotesk", serif;
+    font-size: 10rem;
+    text-align: center;
+}
+.hero span{
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+.hero img{
+    position: absolute;
+}
+
+
+.section-2{
+    width: 100%;
+    min-height: 70%;
+    background-color:#222222 ;
+    overflow: hidden;
+    padding: 4vw;
+
+    
+
+
+}
+
+
+
+.section-2 h1{
+    color: white;
+    font-weight: bold;
+    font-family: "Space Grotesk", serif;
+    font-size: 2.4rem;
+}
+
+.card{
+width: 30%;
+min-height:90%;
+overflow: hidden;
+background-color: #9c1422;
+border-radius: 16px;
+padding: 1.2vw;
+transition: all ease-in 0.2s;
+border: none;
+
+}
+.card-parent{
+    overflow: hidden;
+margin-top: 4px;
+    width: 100%;
+min-height:90%;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 22px;
+}
+.card-img{
+    height: 60%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    
+}
+.card p{
+    margin-top: 2px;
+    font-weight: 500;
+    font-family: sans-serif;
+    
+}
+.card button{
+    margin-top: 12px;
+    background-color: #111111;
+    color: #fff;
+    padding: 1vw;
+    border-radius: 12px;
+    border: none;
+    outline: none   ;
+    font-family: "Space Grotesk", serif;
+}
+.card button:hover{
+    background-color: #272727;
+}
+
+.card:hover{
+    transform: scale(1.01);
+    
+}
+.card-img img:hover{
+    filter: grayscale(1);
+    transform: scale(1.01);
+
+}
+
+.section-3{
+    height: 100%;
+    width: 100%;
+    background-color:#111111 ;
+    padding: 2vw;
+}
+.images{
+    display: flex;
+    height: 80%;
+    width: 100%;
+    margin:  4% auto 0;
+    box-sizing: border-box;
+}
+.img-1{
+    margin: 0 1%;
+    overflow: hidden;
+    width: 20%;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: .4s;
+    filter: grayscale(1);
+}
+
+
+.img-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    /* transition: .5s;  */
+}
+.img-1:hover{
+    flex-basis: 14%;
+    filter: grayscale(0);
+    
+}
+.section-3 h1{
+color: #fff;
+font-size: 2.5vw;
+margin-top: 20px;
+margin-left: 10px;
+text-align: center;
+}
+
+.footer{
+    background-color:#222222 ;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.links{
+    margin: 0 10%;
+    display: inline;
+    padding: 20px;
+}
+
+.links ul li{
+    list-style: none;
+    margin-top: 20px;
+    color: white;
+    
+}
+
+.social-icons{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.social-icons i{
+    color: rgb(236, 236, 236);
+    padding-left: 20px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width:1024px) {
+    .hero h1{
+        font-size: 8rem;
+    }
+    nav ul li{
+    
+        font-size: 1rem;
+    }
+    .hero h1{
+        font-size: 7.3rem;
+    }
+    .hero img{
+        
+    }
+    .circle{
+        width: 450px;
+        height: 450px;
+    }
+    .card-parent{
+    
+    }
+    .card h1{
+        font-size: 2rem;
+    }
+    .card p{
+        font-size: 0.7rem;
+    }
+    .card button{
+        font-size: 0.7rem;
+    }
+    .card{
+        width: 86%;
+        height: 100%;
+    }
+    .card-img{
+        width: 100%;
+    }
+    .card-img img{
+        width: 100%;
+        object-position: center;
+    }
+    .section-3{
+        flex-wrap: wrap;
+    }
+    .footer{
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    .hero h1{
+        font-size: 8rem;
+    }
+    nav ul li{
+        display: none;
+        
+    }
+    .hero h1{
+        font-size: 5rem;
+    }
+    .hero img{
+        width: 86%;
+    }
+    .circle{
+        width: 250px;
+        height: 250px;
+    }
+    .card-parent{
+        flex-wrap: wrap;
+    }
+    .card h1{
+        font-size: 2rem;
+    }
+    .card p{
+        font-size: 0.9rem;
+    }
+    .card button{
+        font-size: 0.7rem;
+    }
+    .card{
+        width: 90%;
+        height: 100%;
+    }
+    .card-img{
+        width: 100%;
+    }
+    .card-img img{
+        width: 100%;
+        object-position: center;
+    }
+    .section-3{
+        flex-wrap: wrap;
+    }
+    .footer{
+        flex-wrap: wrap;
+    }
+}
+
+
