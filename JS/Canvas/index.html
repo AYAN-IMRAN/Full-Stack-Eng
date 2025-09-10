@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(36, 36, 36);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      canvas {
+        /* Add border for visibility (optional) */
+        border: 2px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 🎨 Canvas element -->
+    <canvas></canvas>
+
+    <script>
+      // 🎯 Select canvas element
+      let canvas = document.querySelector("canvas");
+
+      // ✅ Set canvas size
+      canvas.width = 500;  // correct: number (not string)
+      canvas.height = 500;
+
+      // 🖌️ Get drawing context
+      let ctx = canvas.getContext("2d"); // "2d" context for 2D drawings
+
+      // ===============================
+      // 🎨 FILL RECTANGLE (Ander ka color)
+      // ===============================
+      ctx.fillStyle = "red"; // Fill color red
+      ctx.fillRect(20, 20, 100, 100); 
+      // (x, y, width, height)
+      // Ye red box draw karega top-left par
+
+      // ===============================
+      // 🎯 STROKE RECTANGLE (Baher ka border)
+      // ===============================
+      ctx.strokeStyle = "white"; // Stroke color white
+      ctx.lineWidth = 5;         // Border ki motai (width)
+      ctx.strokeRect(20, 20, 200, 100); 
+      // Ye white border draw karega
+
+    </script>
+  </body>
+</html>

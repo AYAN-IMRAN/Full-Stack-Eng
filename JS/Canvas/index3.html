@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canvas Circles Animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-color: #212121;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      background-color: white;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas></canvas>
+
+  <script>
+    // 1. Canvas Setup
+    const canvas = document.querySelector("canvas");
+    canvas.width = 500;
+    canvas.height = 500;
+
+    const ctx = canvas.getContext("2d");
+
+    // 2. Function to get random color
+    function getRandomHexColor() {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      return "#" + randomColor.padStart(6, '0');
+    }
+
+    // 3. Circle Class
+    class Circle {
+      constructor(x, y, dx, dy, radius) {
+        this.x = x;
+        this.y = y;
+        this.dx = dx;
+        this.dy = dy;
+        this.radius = radius;
+        this.color = getRandomHexColor();
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      update() {
+        // Bounce and change color
+        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+          this.dx = -this.dx;
+          this.color = getRandomHexColor(); // Color changes on x-bounce
+        }
+
+        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+          this.dy = -this.dy;
+          this.color = getRandomHexColor(); // Color changes on y-bounce
+        }
+
+        this.x += this.dx;
+        this.y += this.dy;
+
+        this.draw();
+      }
+    }
+
+    // 4. Create 50 Circles
+    const circleArray = [];
+
+    for (let i = 0; i < 50; i++) {
+      let radius = 30;
+
+      // Safe starting position inside canvas
+      let x = Math.random() * (canvas.width - radius * 2) + radius;
+      let y = Math.random() * (canvas.height - radius * 2) + radius;
+
+      // Random speed between 2.5 and 5
+      let dx = (Math.random() * 0.5 + 0.5) * 5;
+      let dy = (Math.random() * 0.5 + 0.5) * 5;
+
+      circleArray.push(new Circle(x, y, dx, dy, radius));
+    }
+
+    // 5. Animate Function
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < circleArray.length; i++) {
+        circleArray[i].update();
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>

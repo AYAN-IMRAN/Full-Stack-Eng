@@ -1,0 +1,43 @@
+@font-face {
+    font-family: new;
+    src: url(/NeueMachina-Regular.otf);
+}
+
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.page1,
+.page2,
+.page3 {
+    width: 100vw;
+    height: 100vh;
+    padding: 5vw 0;
+}
+
+.move {
+    background-color: #D9FF09;
+    display: flex;
+    overflow: hidden;
+}
+
+.marque {
+    flex-shrink: 0;
+    background-color: #D9FF09;
+    padding: 0 1.5vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.marque h1 {
+    font-size: 60px;
+    font-family: new;
+}
+
+.marque img {
+    height: 50px;
+}

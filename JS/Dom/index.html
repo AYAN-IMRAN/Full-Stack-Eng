@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: end;
+            justify-content: space-around;
+            border: 1px solid black;
+            background-size: cover;
+            background-position: center;
+            transition: all ease 0.6s;
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 160px;
+            height: 160px;
+            padding: 1vw;
+        }
+
+        .items img {
+            width: 100%;
+            height: 100%;
+            border-radius: 32px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="items">
+            <img src="https://i.pinimg.com/236x/f2/6c/63/f26c634a3d0d2aa2102af64329e9f9f7.jpg" alt="">
+        </div>
+
+        <div class="items">
+            <img src="https://i.pinimg.com/236x/14/1b/fc/141bfcb62939b47088810ad5d7e4d1be.jpg" alt="">
+        </div>
+
+        <div class="items">
+            <img src="https://i.pinimg.com/474x/a0/59/1c/a0591ca8d90fa7e8869d7cf17d88c23f.jpg" alt="">
+        </div>
+        <div class="items">
+            <img src="https://i.pinimg.com/474x/b0/c7/ae/b0c7ae61105da3aba068a1ab523dc77f.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        // Get all images
+        let images = document.querySelectorAll(".items img")
+        console.log(images)
+
+        let main = document.querySelector(".main")
+        console.log(main)
+
+        images.forEach(item => {
+            item.addEventListener("mouseover", () => {
+                main.style.backgroundImage = `url(${item.src})`;
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

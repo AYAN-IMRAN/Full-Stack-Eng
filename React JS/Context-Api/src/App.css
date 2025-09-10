@@ -1,0 +1,81 @@
+/* App.css */
+
+/* Fullscreen container to center everything */
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f0f;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main card */
+.main {
+  background-color: #181818;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  width: 320px;
+  color: #f1f1f1;
+}
+
+/* Heading */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00ffe1;
+  text-shadow: 0 0 10px #00ffe1aa;
+}
+
+/* Count display */
+p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+p:hover {
+  transform: scale(1.05);
+}
+
+/* Button */
+button {
+  padding: 12px 20px;
+  background-color: #00ffe1;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px #00ffe1aa;
+}
+
+button:hover {
+  background-color: #00e6ce;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 400px) {
+  .main {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
