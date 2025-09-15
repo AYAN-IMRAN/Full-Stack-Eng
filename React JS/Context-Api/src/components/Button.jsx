@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CounterContext } from '../context/CounterContext'
+import { CounterContext } from '../context/ThemeContext'
 
 function Button() {
     console.log("Button re render")

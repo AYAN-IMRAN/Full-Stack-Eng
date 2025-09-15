@@ -1,22 +1,33 @@
 import React, { useState } from "react";
-import { CounterContext } from "./context/CounterContext";
-import Counter from "./components/Counter";
 import "./App.css";
+import { ThemeContext } from "./context/ThemeContext";
+import ThemeButton from "./components/ThemeButton";
+import Header from "./components/Header"
+
 
 
 function App() {
-  console.log("App re render ")
-  const [count, setCount] = useState(0);
-  return (
-    <div className="app-container">
-    <div className="main">
-      <h1>Counter App</h1>
-      <CounterContext.Provider value={{ count, setCount }}>
-        <Counter />
-      </CounterContext.Provider>
-    </div>
-    </div>
+  const [theme, setTheme] = useState("light");
 
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div
+        className={
+          theme === "light"
+            ? "min-h-screen bg-white text-black transition"
+            : "min-h-screen bg-neutral-900 text-white transition"
+        }
+      >
+        <Header />
+        <div className="flex items-center justify-center h-[80vh]">
+          <ThemeButton />
+        </div>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
